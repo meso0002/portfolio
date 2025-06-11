@@ -1,0 +1,53 @@
+.tema-menu {
+  text-align: center;
+  padding: 5rem 20rem;
+}
+
+.tema-menu h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+.tema-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tema-box {
+  background-color: #6e6253;
+  color: #fff;
+  padding: 1.2rem 2.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tema-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .tema-menu {
+    padding: 2rem 1rem;
+  }
+
+  .tema-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .tema-box {
+    width: 80%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+    word-break: break-word;
+  }
+}

@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  background-color: #ede1d2;
+  color: #1a1a1a;
+}
+
+/*linje*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #6e6253;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #dbc6a9;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #cbb58f;
+}
+
+/*header*/
+
+.refleksion-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.colonne {
+  flex: 1;
+  min-width: 300px;
+}
+
+.colonne h2 {
+  margin-bottom: 1rem;
+}
+
+.colonne ul {
+  padding-left: 1.5rem;
+  list-style: circle;
+}
+
+.knap-wrapper {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.cta-knap {
+  background-color: #6e6253;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+}
+
+/* font */
+
+@font-face {
+  font-family: "tekst";
+  src: url(../fonts/Prata/Prata-Regular.ttf);
+}
+
+@font-face {
+  font-family: "overskrift";
+  src: url(../fonts/PlayfairDisplaySC-Bold.ttf);
+}
+
+body {
+  font-family: "tekst";
+  letter-spacing: 0, 08em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "overskrift";
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dbc6a9;
+  padding: 2rem;
+}
+
+.footer .left,
+.footer .right {
+  margin: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/*burger*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Så logo og burger står i hver sin side */
+  align-items: center;
+  padding: 20px;
+  background-color: #dbc6a9;
+}
+
+.logo img {
+  width: 80px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center; /* Centrerer nav-links på computer */
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.menu a:hover {
+  color: #6e6253;
+}
+
+/* BURGER MENU */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  transition: 0.2s linear;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    background-color: #dbc6a9;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  nav.active .menu {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 1.3rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-footer .left,
+  .site-footer .right {
+    width: 100%;
+  }
+}
